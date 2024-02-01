@@ -23,6 +23,8 @@ window.addEventListener('load', function() {
   function menutoggle() {
     // Verifica se a altura máxima do estilo do elemento MenuItems é "0px"
     if (MenuItems.style.maxHeight == "0px") {
+      // Se for "0px", define a altura máxima do estilo do elemento MenuItems como "200px"
+      MenuItems.style.maxHeight = "200px";
     } else {
       // Caso contrário, se não for "0px", define a altura máxima do estilo do elemento MenuItems como "0px"
       MenuItems.style.maxHeight = "0px";
