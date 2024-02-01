@@ -1,0 +1,253 @@
+/* Importação fonts google */
+  @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500&family=Inter:wght@600&family=Montserrat:wght@800&family=Teko:wght@600&display=swap');
+
+  /* Estilos gerais (todo o projeto) */
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+  }
+
+  body{
+    background: #1f1517;
+    color: #fff;
+
+  }
+
+  html {
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+  }
+
+  a {
+    text-decoration: none; /*Remove decoraçao de texto*/
+  }
+  /* Remove os marcadores (Bolinhas) */
+
+  ul {
+  list-style-type:none;
+  }
+
+  /* ______________________________________________________________________ */
+  /* Cabeçalho/Header (Barra de navegação) */
+
+  nav{
+    max-width: 1120px;  
+    margin: auto; /* Centraliza o elemento horizonalmente*/
+    padding: 1.5rem 10rem;
+    display: flex; 
+    flex-direction: row; /* Torna o container Flex (flexivel)*/
+    justify-content: space-between;
+  }
+
+  .title {
+    font-family: 'Teko' , sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: uppercase; /* Tranforma o texto para letras maiusculas*/
+  }
+
+   /*Estilos para menu hamburguer */
+   .menu-toggle {
+    display: none; /* Não exibe em telas grandes*/
+    cursor: pointer;
+   }
+
+   /* Imagem do Hamburguer (resoponsividade) */
+
+   .menu-icon {  
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+   }
+
+   .menu {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    color:  #fff2e780;
+    margin-top: 9px;
+    margin-left: 25px;
+    margin-right: 25px;
+
+   }
+
+   .menu a:hover {
+    color: #fff;
+   }
+
+   .menu a:visited {
+    color: #fff2e780;
+   }
+
+   .github {
+    color: #fff2e7;
+    font-weight: 600;
+    margin-top: 8px;
+   }
+
+   .github:hover {
+    color: #a45a49;
+   }
+
+   /* __________________________________________ */
+   /* Sessão principal (Main) */
+
+   /* _________________ */
+/* Sessão principal (main) */
+
+/* MAIN */
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    background: #181012;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.container.slide-from-right {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.info {
+    max-width: 1120px;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 6rem;
+    align-items: center;
+    padding: 0rem 2rem;
+    margin: auto;
+    max-width: 1120px;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 6rem;
+    align-items: center;
+    padding: 0rem 2rem;
+    margin: auto;
+    overflow: clip;
+}
+
+/* DESTAQUE */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.news {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.marrom {
+    color: #a45a49;
+}
+
+.amarelo {
+    color: #e7a80e;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    color: #fff;
+}
+
+hr {
+    border-color: #a45a49;
+}
+
+.subtitle {
+    color: #c7bab3;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+
+.images {
+    max-width: 45%;
+    column-count: 4;
+    column-gap: 1rem;
+    margin: -1rem;
+}
+    .images > figure > img {
+        width: 100px;
+        border-radius: 0.5rem;
+    
+}
+
+.button {
+    width: 100%;
+    max-width: 1120px;
+    padding: 1rem;
+    margin: auto;
+    transform: translateY(-50%);
+}
+
+button {
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: #a45a49;
+    transition: background-color 0.3rem ease;
+}
+
+button:hover {
+    background: #783f37;
+}
+ 
+
+   /* Responsividade */
+@media screen and (max-width: 768px) {
+    
+
+   nav ul{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background: #333;
+    width: 100%;
+    overflow: hidden;
+    transition: max-heigth 1s;
+    z-index: 9;
+   }
+   nav ul li {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+   }
+   .menu{
+    margin-left: 0px;
+   }
+
+   .menu-icon {
+    display: block;
+    cursor: pointer;
+    margin-right: -70px;
+   }
+   .github {
+    margin-left: 70px;
+    margin-right: 70px;
+   }
+
+.title {
+    margin-left: -100px;
+}
+}
